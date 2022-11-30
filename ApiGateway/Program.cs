@@ -20,7 +20,7 @@ builder.Services.AddAuthentication().
             ValidateAudience = false
         };
 }); ;
-
+    
 builder.Services.AddOcelot();
 
 var app = builder.Build();

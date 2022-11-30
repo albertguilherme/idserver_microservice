@@ -4,6 +4,7 @@ using IdentityServer4.Services;
 using IdentityServer4.Test;
 using IdentityServerHost.Quickstart.UI;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,8 @@ builder.Services.AddIdentityServer()
     .AddInMemoryApiScopes(Config.ApiScopes)
     .AddTestUsers(TestUsers.Users)
     .AddDeveloperSigningCredential();
+
+IdentityModelEventSource.ShowPII = true;
 
 builder.Services.AddControllersWithViews();
 

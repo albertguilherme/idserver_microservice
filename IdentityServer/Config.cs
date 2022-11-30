@@ -24,7 +24,7 @@ namespace IdentityServer
                 },
                 PostLogoutRedirectUris = new List<string>()
                 {
-                    "https://localhost:3000/signout-callback-oidc"
+                    "http://localhost:3000/signout-callback-oidc"
                 },
                 ClientSecrets = new List<Secret>
                 {
@@ -70,12 +70,12 @@ namespace IdentityServer
              new TestUser
                 {
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
-                    Username = "guilherme",
+                    Username = "alice",
                     Password = "123",
                     Claims = new List<Claim>
                     {
-                        new Claim(JwtClaimTypes.GivenName, "guilherme"),
-                        new Claim(JwtClaimTypes.FamilyName, "alberti")
+                        new Claim(JwtClaimTypes.GivenName, "Alice"),
+                        new Claim(JwtClaimTypes.FamilyName, "Smith")
                     }
                 }
             };
